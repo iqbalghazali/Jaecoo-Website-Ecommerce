@@ -1,0 +1,62 @@
+.compare {
+  padding: 100px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent);
+  margin-bottom: 8px;
+  font-weight: 600;
+  display: block;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 14px 20px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 0.9rem;
+}
+
+.table th {
+  background: var(--surface2);
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.highlightCol {
+  background: rgba(200, 164, 78, 0.05);
+}
+
+.check {
+  color: #4ade80;
+}
+
+.cross {
+  color: #555;
+}

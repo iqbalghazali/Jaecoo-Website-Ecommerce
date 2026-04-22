@@ -1,0 +1,84 @@
+.banner {
+  background: var(--accent);
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 101;
+}
+
+.nav {
+  position: fixed;
+  top: 36px;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: var(--accent);
+}
+
+.links {
+  display: flex;
+  gap: 28px;
+}
+
+.links a {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color var(--transition);
+}
+
+.links a:hover {
+  color: var(--text);
+}
+
+.modelLinks {
+  display: flex;
+  gap: 10px;
+}
+
+.modelLinks a {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  border: 1px solid rgba(200, 164, 78, 0.4);
+  border-radius: 999px;
+  padding: 4px 10px;
+  transition: all var(--transition);
+}
+
+.modelLinks a:hover {
+  color: #000;
+  background: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .modelLinks {
+    display: none;
+  }
+}

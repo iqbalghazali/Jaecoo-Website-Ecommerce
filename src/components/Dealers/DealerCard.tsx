@@ -1,0 +1,29 @@
+'use client';
+
+import styles from './DealersSection.module.css';
+
+interface DealerCardProps {
+  name: string;
+  addr: string;
+  phone: string;
+}
+
+export default function DealerCard({ name, addr, phone }: DealerCardProps) {
+  const normalizedPhone = phone.replace(/[^\d]/g, '');
+  const whatsappHref = `https://wa.me/${normalizedPhone}`;
+
+  return (
+    <div className={styles.card}>
+      <h4 className={styles.name}>{name}</h4>
+      <div className={styles.addr}>{addr}</div>
+      <a
+        className={styles.phone}
+        href={whatsappHref}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {phone}
+      </a>
+    </div>
+  );
+}

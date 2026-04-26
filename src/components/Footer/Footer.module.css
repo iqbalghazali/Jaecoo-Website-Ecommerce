@@ -26,8 +26,14 @@
 }
 
 .links {
-  display: flex;
-  gap: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+.linkColumn {
+  min-width: 0;
 }
 
 .links h5 {
@@ -52,6 +58,24 @@
   opacity: 1;
 }
 
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.socials svg {
+  width: 16px;
+  height: 16px;
+}
+
 .bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: 24px;
@@ -62,6 +86,7 @@
 
 @media (max-width: 768px) {
   .links {
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }

@@ -9,7 +9,7 @@ export default function BookingSection() {
       <span className={styles.tag}>Experience</span>
       <h2 className={styles.title}>Book a Test Drive</h2>
       <p className={styles.desc}>
-        Feel the difference. Schedule your exclusive JAECOO test drive experience at a showroom near you.
+        Jadwalkan test drive Anda dan kirim langsung ke WhatsApp showroom kami untuk respon cepat.
       </p>
       <BookingForm />
     </section>

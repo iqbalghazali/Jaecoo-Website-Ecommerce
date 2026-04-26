@@ -6,6 +6,7 @@ export type ModelData = {
   name: string
   tagline: string
   price: string
+  image: string
   specs: { value: string; label: string }[]
 }
 
@@ -24,7 +25,8 @@ export const MODELS: ModelData[] = [
     badge: 'Entry EV SUV',
     name: 'J5 EV Standard',
     tagline: 'Compact electric SUV untuk mobilitas harian yang efisien dan praktis.',
-    price: 'Rp 249.900.000 (OTR Jakarta)',
+    price: 'Rp 281.900.000 (OTR Bandung)',
+    image: '/Photos/J5 EV Standard.webp',
     specs: [
       { value: 'BEV (Electric)', label: 'Powertrain' },
       { value: '210 PS', label: 'Power' },
@@ -38,7 +40,8 @@ export const MODELS: ModelData[] = [
     badge: 'Entry EV SUV',
     name: 'J5 EV Premium',
     tagline: 'Electric SUV dengan teknologi lebih canggih dan kenyamanan maksimal.',
-    price: 'Rp 299.900.000 (OTR Jakarta)',
+    price: 'Rp 311.900.000 (OTR Bandung)',
+    image: '/Photos/J5 EV Premium.webp',
     specs: [
       { value: 'BEV (Electric)', label: 'Powertrain' },
       { value: '210 PS', label: 'Power' },
@@ -52,7 +55,8 @@ export const MODELS: ModelData[] = [
     badge: 'Core Product',
     name: 'J7 AWD',
     tagline: 'Varian J7 dengan penggerak semua roda untuk all-terrain.',
-    price: 'Rp 4xx.000.000',
+    price: 'Rp 561.900.000 (OTR Bandung)',
+    image: '/Photos/J7 AWD.jpg',
     specs: [
       { value: '2.0T', label: 'Engine' },
       { value: 'AWD', label: 'Drive' },
@@ -65,7 +69,8 @@ export const MODELS: ModelData[] = [
     badge: 'Hybrid Performance',
     name: 'J7 SHS',
     tagline: 'Super Hybrid System untuk efisiensi tinggi dan respons cepat.',
-    price: 'Rp 4xx.000.000',
+    price: 'Rp 511.900.000 (OTR Bandung)',
+    image: '/Photos/J7 SHS.webp',
     specs: [
       { value: 'SHS Hybrid', label: 'Powertrain' },
       { value: 'FWD/AWD (varian)', label: 'Drive' },
@@ -78,7 +83,8 @@ export const MODELS: ModelData[] = [
     badge: 'Luxury Hybrid',
     name: 'J8 SHS',
     tagline: 'Flagship SUV dengan SHS untuk performa dan efisiensi premium.',
-    price: 'Rp 6xx.000.000',
+    price: 'Rp 830.000.000 (OTR Bandung)',
+    image: '/Photos/J8 SHS.jpg',
     specs: [
       { value: '2.0T', label: 'Engine' },
       { value: 'SHS Hybrid', label: 'Powertrain' },
@@ -92,7 +98,8 @@ export const MODELS: ModelData[] = [
     badge: 'Top Flagship',
     name: 'J8 ARDIS',
     tagline: 'Varian tertinggi J8 dengan fitur teknologi dan kenyamanan penuh.',
-    price: 'Rp 7xx.000.000',
+    price: 'Rp 701.900.000 (OTR Bandung)',
+    image: '/Photos/J8 ARDIS.webp',
     specs: [
       { value: '2.0T Turbo', label: 'Engine' },
       { value: 'AWD', label: 'Drive' },

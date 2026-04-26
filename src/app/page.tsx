@@ -1,9 +1,11 @@
 import Nav from '../components/Nav/Nav';
 import Hero from '../components/Hero/Hero';
-import FinanceSection from '../components/Finance/FinanceSection';
-import CompareSection from '../components/Compare/CompareSection';
+import ModelsSection from '../components/Models/ModelsSection';
+// import FinanceSection from '../components/Finance/FinanceSection';
 import DealersSection from '../components/Dealers/DealersSection';
 import BookingSection from '../components/Booking/BookingSection';
+import TestimonialsSection from '../components/Testimonials/TestimonialsSection';
+import FloatingWhatsApp from '../components/FloatingWhatsApp/FloatingWhatsApp';
 import Footer from '../components/Footer/Footer';
 
 export default function HomePage() {
@@ -11,11 +13,13 @@ export default function HomePage() {
     <>
       <Nav />
       <Hero />
-      <FinanceSection />
-      <CompareSection />
-      <DealersSection />
+      <ModelsSection highlightedImage specLimit={2} />
+      {/* <FinanceSection /> */}
+      {/* <DealersSection /> */}
+      <TestimonialsSection />
       <BookingSection />
       <Footer />
+      <FloatingWhatsApp />
     </>
   );
 }

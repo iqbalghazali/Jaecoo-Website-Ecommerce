@@ -4,7 +4,12 @@ import ModelCard from './ModelCard';
 import styles from './ModelsSection.module.css';
 import { MODELS } from '../../data/sections/models';
 
-export default function ModelsSection() {
+type ModelsSectionProps = {
+  highlightedImage?: boolean;
+  specLimit?: number;
+};
+
+export default function ModelsSection({ highlightedImage = false, specLimit = 4 }: ModelsSectionProps) {
   return (
     <section id="models">
       <span className={styles.tag}>Our Lineup</span>
@@ -14,7 +19,13 @@ export default function ModelsSection() {
       </p>
       <div className={styles.grid}>
         {MODELS.map((m) => (
-          <ModelCard key={m.name} id={`model-${m.slug}`} {...m} />
+          <ModelCard
+            key={m.name}
+            id={`model-${m.slug}`}
+            highlightedImage={highlightedImage}
+            specLimit={specLimit}
+            {...m}
+          />
         ))}
       </div>
     </section>

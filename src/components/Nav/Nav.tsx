@@ -14,10 +14,10 @@ const fallbackLinks: NavLinkItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Models', href: '/models' },
   { label: 'Specs', href: '/specs' },
-  { label: 'Finance', href: '/finance' },
+  // { label: 'Finance', href: '/finance' },
   { label: 'Compare', href: '/compare' },
-  { label: 'Dealers', href: '/dealers' },
-  { label: 'Book Test Drive', href: '/book-test-drive' },
+  // { label: 'Dealers', href: '/dealers' },
+  // { label: 'Book Test Drive', href: '/book-test-drive' },
 ];
 
 const fallbackModelLinks: NavLinkItem[] = [
@@ -25,6 +25,10 @@ const fallbackModelLinks: NavLinkItem[] = [
   { label: 'J6', href: '/models#model-j6' },
   { label: 'J8', href: '/models#model-j8' },
 ];
+
+const fallbackCompareLinks: NavLinkItem[] = [
+
+]
 
 export default function Nav() {
   const [navLinks, setNavLinks] = useState<NavLinkItem[]>(fallbackLinks);

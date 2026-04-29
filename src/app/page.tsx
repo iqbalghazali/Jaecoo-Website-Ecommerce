@@ -5,6 +5,7 @@ import ModelsSection from '../components/Models/ModelsSection';
 import DealersSection from '../components/Dealers/DealersSection';
 import BookingSection from '../components/Booking/BookingSection';
 import TestimonialsSection from '../components/Testimonials/TestimonialsSection';
+import FinalCtaSection from '../components/FinalCta/FinalCtaSection';
 import FloatingWhatsApp from '../components/FloatingWhatsApp/FloatingWhatsApp';
 import Footer from '../components/Footer/Footer';
 
@@ -15,8 +16,9 @@ export default function HomePage() {
       <Hero />
       <ModelsSection highlightedImage specLimit={2} />
       {/* <FinanceSection /> */}
-      {/* <DealersSection /> */}
+      <DealersSection />
       <TestimonialsSection />
+      <FinalCtaSection />
       <BookingSection />
       <Footer />
       <FloatingWhatsApp />

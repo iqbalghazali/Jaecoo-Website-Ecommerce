@@ -17,39 +17,120 @@
 .title {
   font-size: 2.4rem;
   font-weight: 800;
-  margin-bottom: 32px;
+  margin-bottom: 18px;
 }
 
-/* .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+.operationalCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: linear-gradient(135deg, rgba(199, 168, 102, 0.16), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(199, 168, 102, 0.35);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 26px;
+  max-width: 520px;
+}
+
+.operationalIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(199, 168, 102, 0.15);
+  color: var(--accent);
+  flex: 0 0 auto;
+}
+
+.operationalIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.operationalTitle {
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.operationalText {
+  font-size: 0.86rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
-} */
+}
 
 .card {
-  background: var(--surface);
-  padding: 24px;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.03), rgba(199, 168, 102, 0.06));
+  padding: 26px;
   border-radius: var(--radius);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  transition: border-color var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: border-color var(--transition), transform var(--transition);
+  width: 100%;
 }
 
 .card:hover {
   border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .name {
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.metaRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.metaIcon {
+  color: var(--accent);
+  line-height: 1.2;
+  margin-top: 2px;
+  flex: 0 0 auto;
 }
 
 .addr {
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   color: var(--muted);
-  margin-bottom: 4px;
+  line-height: 1.6;
+}
+
+.phoneText {
+  color: var(--text);
+  font-size: 0.9rem;
 }
 
 .phone {
+  display: inline-flex;
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #000;
   font-size: 0.85rem;
-  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.phone:hover {
+  opacity: 0.92;
+}
+
+@media (max-width: 768px) {
+  .operationalCard {
+    max-width: 100%;
+  }
 }

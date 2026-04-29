@@ -16,7 +16,7 @@ interface CompareRow {
     { feature: 'Drive', keys: ['Drive System', 'Drive'] },
     { feature: 'Transmission', keys: ['Transmission'] },
     { feature: 'Range', keys: ['Range'] },
-    { feature: 'ADAS', keys: ['ADAS', 'ADAS Level'] },
+    { feature: 'ADAS', keys: ['ADAS', 'ADAS Level', 'Safety Suite'] },
     { feature: 'Seating', keys: ['Seating'] },
   ];
   
@@ -29,6 +29,30 @@ interface CompareRow {
     return null;
   }
   
+function getFeatureFallback(feature: string, model: (typeof MODELS)[number]): string {
+  switch (feature) {
+    case 'Powertrain':
+      return model.specs.find((item) => item.label === 'Engine') ? 'ICE / Hybrid' : 'See full specs';
+    case 'Engine':
+      return model.specs.find((item) => item.label === 'Powertrain')?.value.includes('Electric')
+        ? 'Electric Motor'
+        : 'See full specs';
+    case 'Transmission':
+      return model.specs.find((item) => item.label === 'Powertrain')?.value.includes('Electric')
+        ? 'Single Speed EV'
+        : 'See full specs';
+    case 'Range':
+      return model.specs.find((item) => item.label === 'Powertrain')?.value.includes('Electric') ||
+        model.specs.find((item) => item.label === 'Powertrain')?.value.includes('Hybrid')
+        ? 'See full specs'
+        : 'N/A';
+    case 'ADAS':
+      return 'See safety specs';
+    default:
+      return 'See full specs';
+  }
+}
+
   export const compareData: CompareRow[] = IMPORTANT_FEATURES.map(({ feature, keys }) => {
     const values = MODELS.map((model) => {
       if (keys.includes('price')) return model.price;
@@ -37,9 +61,9 @@ interface CompareRow {
       if (fromModel) return fromModel;
   
       const fromSpecs = getSpecValue(model.slug as ModelKey, keys);
-      return fromSpecs ?? '-';
+      return fromSpecs ?? getFeatureFallback(feature, model);
     });
   
     return { feature, values };
-  }).filter((row) => row.values.some((value) => value !== '-'));
+  });
   

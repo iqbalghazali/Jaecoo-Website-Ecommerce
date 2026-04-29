@@ -12,14 +12,16 @@ export default function Footer() {
         <div className={styles.links}>
           <div className={styles.linkColumn}>
             <h5>Explore</h5>
-            <a href="#models">Models</a>
+            <a href="/#hero">Home</a>
+            <a href="/#models">Models</a>
             <a href="/compare">Compare</a>
-            <a href="#testimonials">Testimoni</a>
+            <a href="/#testimonials">Testimoni</a>
           </div>
           <div className={styles.linkColumn}>
-            <h5>Support</h5>
-            <a href="#dealers">Dealers</a>
-            <a href="#contact">Book Test Drive</a>
+            <h5>Quick Actions</h5>
+            <a href="/#final-cta">Why Choose Us</a>
+            <a href="/#contact">Book Test Drive</a>
+            <a href="/models">All Models</a>
           </div>
           <div className={styles.linkColumn}>
             <h5>Contact</h5>

@@ -8,7 +8,7 @@ export type SectionKey =
   | 'specs'
   // | 'finance'
   | 'compare'
-  // | 'dealers'
+  | 'dealers'
   // | 'book-test-drive'
 
 export const NAV_LINKS: NavLink[] = [
@@ -16,7 +16,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: 'Models', href: '/models' },
   // { label: 'Finance', href: '/finance' },
   { label: 'Compare', href: '/compare' },
-  // { label: 'Dealers', href: '/dealers' },
+  { label: 'Dealers', href: '/#dealers' },
   // { label: 'Book Test Drive', href: '/book-test-drive' },
 ]
 
@@ -44,11 +44,11 @@ export const SECTION_CONTENT: Record<
     description:
       'Compare JAECOO models side by side to find the best fit for your lifestyle and budget.',
   },
-  // dealers: {
-  //   title: 'Dealers',
-  //   description:
-  //     'Find official dealerships near you and get contact details for showroom visits and support.',
-  // },
+  dealers: {
+    title: 'Dealers',
+    description:
+      'Find official dealerships near you and get contact details for showroom visits and support.',
+  },
   // 'book-test-drive': {
   //   title: 'Book Test Drive',
   //   description:

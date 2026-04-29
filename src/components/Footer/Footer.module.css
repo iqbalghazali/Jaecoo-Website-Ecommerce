@@ -88,5 +88,6 @@
   .links {
     grid-template-columns: 1fr;
     gap: 24px;
+    width: 100%;
   }
 }

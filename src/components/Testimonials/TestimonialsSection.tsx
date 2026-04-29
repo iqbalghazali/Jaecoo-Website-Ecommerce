@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import styles from './TestimonialsSection.module.css';
 
 const testimonials = [
@@ -62,6 +63,21 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
+  const [selectedTestimonial, setSelectedTestimonial] = useState<
+    (typeof testimonials)[number] | null
+  >(null);
+
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedTestimonial(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, []);
+
   return (
     <section id="testimonials">
       <span className={styles.tag}>Testimonials</span>
@@ -72,14 +88,53 @@ export default function TestimonialsSection() {
 
       <div className={styles.grid}>
         {testimonials.map((item) => (
-          <article key={`${item.name}-${item.model}`} className={styles.card}>
+          <button
+            key={`${item.name}-${item.model}`}
+            type="button"
+            className={styles.card}
+            onClick={() => setSelectedTestimonial(item)}
+            aria-label={`Lihat detail testimonial dari ${item.name}`}
+          >
             <img src={item.image} alt={item.name} className={styles.photo} />
             <p className={styles.quote}>"{item.quote}"</p>
             <h4 className={styles.name}>{item.name}</h4>
             <p className={styles.model}>{item.model}</p>
-          </article>
+          </button>
         ))}
       </div>
+
+      {selectedTestimonial && (
+        <div
+          className={styles.modalOverlay}
+          onClick={() => setSelectedTestimonial(null)}
+          role="presentation"
+        >
+          <div
+            className={styles.modal}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Detail testimonial ${selectedTestimonial.name}`}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className={styles.closeButton}
+              onClick={() => setSelectedTestimonial(null)}
+              aria-label="Tutup modal testimonial"
+            >
+              ×
+            </button>
+            <img
+              src={selectedTestimonial.image}
+              alt={selectedTestimonial.name}
+              className={styles.modalPhoto}
+            />
+            <p className={styles.modalQuote}>"{selectedTestimonial.quote}"</p>
+            <h4 className={styles.modalName}>{selectedTestimonial.name}</h4>
+            <p className={styles.modalModel}>{selectedTestimonial.model}</p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

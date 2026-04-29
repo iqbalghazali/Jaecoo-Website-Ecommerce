@@ -15,14 +15,25 @@ export default function DealerCard({ name, addr, phone }: DealerCardProps) {
   return (
     <div className={styles.card}>
       <h4 className={styles.name}>{name}</h4>
-      <div className={styles.addr}>{addr}</div>
+      <div className={styles.metaRow}>
+        <span className={styles.metaIcon} aria-hidden="true">
+          📍
+        </span>
+        <div className={styles.addr}>{addr}</div>
+      </div>
+      <div className={styles.metaRow}>
+        <span className={styles.metaIcon} aria-hidden="true">
+          ☎
+        </span>
+        <span className={styles.phoneText}>{phone}</span>
+      </div>
       <a
         className={styles.phone}
         href={whatsappHref}
         target="_blank"
         rel="noopener noreferrer"
       >
-        {phone}
+        Chat WhatsApp
       </a>
     </div>
   );

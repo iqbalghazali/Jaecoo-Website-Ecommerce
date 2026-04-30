@@ -32,7 +32,12 @@
 .table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--surface);
+  background: linear-gradient(
+    180deg,
+    rgba(17, 17, 17, 0.72),
+    rgba(17, 17, 17, 0.52)
+  );
+  backdrop-filter: blur(10px);
   border-radius: var(--radius);
   overflow: hidden;
 }
@@ -46,7 +51,11 @@
 }
 
 .table th {
-  background: var(--surface2);
+  background: linear-gradient(
+    180deg,
+    rgba(26, 26, 26, 0.78),
+    rgba(26, 26, 26, 0.58)
+  );
   color: var(--muted);
   font-size: 0.75rem;
   text-transform: uppercase;

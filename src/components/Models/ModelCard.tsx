@@ -31,11 +31,20 @@ export default function ModelCard({
 
   return (
     <div className={styles.card} id={id}>
-      <img
-        src={image}
-        alt={name}
-        className={`${styles.modelImage} ${highlightedImage ? styles.modelImageHighlight : ''}`}
-      />
+      <div
+        className={`${styles.imageWrap} ${
+          highlightedImage ? styles.imageWrapHighlight : ''
+        }`}
+      >
+        <img
+          src={image}
+          alt={name}
+          className={`${styles.modelImage} ${
+            highlightedImage ? styles.modelImageHighlight : ''
+          }`}
+        />
+        <div className={styles.imageGlow} aria-hidden="true" />
+      </div>
       <span className={styles.badge}>{badge}</span>
       <h3 className={styles.name}>{name}</h3>
       <p className={styles.tagline}>{tagline}</p>

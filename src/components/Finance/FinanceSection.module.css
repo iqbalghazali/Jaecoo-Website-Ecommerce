@@ -35,7 +35,12 @@
 }
 
 .feat {
-  background: var(--surface);
+  background: linear-gradient(
+    180deg,
+    rgba(17, 17, 17, 0.72),
+    rgba(17, 17, 17, 0.52)
+  );
+  backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: var(--radius);
   border: 1px solid rgba(255, 255, 255, 0.04);
@@ -53,7 +58,12 @@
 }
 
 .calcBox {
-  background: var(--surface);
+  background: linear-gradient(
+    180deg,
+    rgba(17, 17, 17, 0.72),
+    rgba(17, 17, 17, 0.52)
+  );
+  backdrop-filter: blur(10px);
   padding: 36px;
   border-radius: var(--radius);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -92,7 +102,12 @@
 .result {
   margin-top: 28px;
   padding: 24px;
-  background: var(--surface2);
+  background: linear-gradient(
+    180deg,
+    rgba(26, 26, 26, 0.72),
+    rgba(26, 26, 26, 0.52)
+  );
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;

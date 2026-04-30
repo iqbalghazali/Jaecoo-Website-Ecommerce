@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
 import styles from './SpecsSection.module.css';
 import {
   modelTabs,
@@ -12,19 +11,18 @@ import {
 } from '../../data/sections/Specs';
 
 export default function SpecsSection() {
-  const searchParams = useSearchParams();
   const [activeModel, setActiveModel] = useState<ModelKey>(modelTabs[0].key);
   const [activeTab, setActiveTab] = useState<TabKey>('perf');
 
   useEffect(() => {
-    const modelParam = searchParams.get('model');
+    const modelParam = new URLSearchParams(window.location.search).get('model');
     if (!modelParam) return;
 
     const validModels = new Set<ModelKey>(modelTabs.map((model) => model.key));
     if (validModels.has(modelParam as ModelKey)) {
       setActiveModel(modelParam as ModelKey);
     }
-  }, [searchParams]);
+  }, []);
 
   return (
     <section id="specs">

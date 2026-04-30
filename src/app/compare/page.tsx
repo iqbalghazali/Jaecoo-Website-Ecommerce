@@ -1,6 +1,11 @@
 import CompareSection from '../../components/Compare/CompareSection';
 import Footer from '../../components/Footer/Footer';
 import Nav from '../../components/Nav/Nav';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Compare',
+};
 
 export default function ComparePage() {
   return (

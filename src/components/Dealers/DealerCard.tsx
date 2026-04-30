@@ -1,5 +1,3 @@
-'use client';
-
 import styles from './DealersSection.module.css';
 
 interface DealerCardProps {

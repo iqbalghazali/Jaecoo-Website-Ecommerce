@@ -1,5 +1,3 @@
-'use client';
-
 import BookingForm from './BookingForm';
 import styles from './BookingSection.module.css';
 

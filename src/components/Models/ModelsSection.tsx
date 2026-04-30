@@ -1,5 +1,3 @@
-'use client';
-
 import ModelCard from './ModelCard';
 import styles from './ModelsSection.module.css';
 import { MODELS } from '../../data/sections/models';

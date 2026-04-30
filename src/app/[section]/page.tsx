@@ -35,6 +35,14 @@ export function generateMetadata({ params }: SectionPageProps): Metadata {
   return {
     title: content.title,
     description: content.description,
+    alternates: {
+      canonical: `/${section}`,
+    },
+    openGraph: {
+      title: content.title,
+      description: content.description,
+      url: `https://jaecoomurahbdg.com/${section}`,
+    },
   }
 }
 

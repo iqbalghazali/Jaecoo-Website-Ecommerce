@@ -1,5 +1,3 @@
-'use client';
-
 import styles from './ModelsSection.module.css';
 
 interface ModelCardProps {

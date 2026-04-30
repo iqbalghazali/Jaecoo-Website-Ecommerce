@@ -1,5 +1,3 @@
-'use client';
-
 import { MODELS } from '../../data/sections/models';
 import styles from './CompareSection.module.css';
 import { compareData } from '../../data/sections/Compare';

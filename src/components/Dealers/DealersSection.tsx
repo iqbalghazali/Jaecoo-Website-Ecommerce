@@ -1,5 +1,3 @@
-'use client';
-
 import DealerCard from './DealerCard';
 import styles from './DealersSection.module.css';
 import { SHOWROOM_PHONE_DISPLAY } from '../../lib/contact';

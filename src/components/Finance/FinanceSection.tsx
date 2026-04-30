@@ -1,5 +1,3 @@
-'use client';
-
 import FinanceCalculator from './FinanceCalculator';
 import styles from './FinanceSection.module.css';
 

@@ -1,5 +1,3 @@
-'use client';
-
 import styles from './FinalCtaSection.module.css';
 
 const promos = [

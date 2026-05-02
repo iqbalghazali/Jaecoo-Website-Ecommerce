@@ -12,10 +12,14 @@ export const metadata: Metadata = {
     default: 'Jaecoo Bandung',
     template: '%s | Jaecoo Bandung',
   },
-  description: 'Jaecoo Bandung - Official showroom and model information.',
+  description:
+    'Dealer resmi JAECOO Bandung. Cek harga OTR Bandung, promo, spesifikasi model, dan booking test drive via WhatsApp.',
   keywords: [
     'Jaecoo Bandung',
     'Dealer Jaecoo Bandung',
+    'Jaecoo murah Bandung',
+    'Harga Jaecoo Bandung',
+    'Promo Jaecoo Bandung',
     'JAECOO Indonesia',
     'Mobil SUV Bandung',
     'Test drive Jaecoo',
@@ -76,7 +80,7 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en">
+    <html lang="id">
       <body>
         <script
           type="application/ld+json"

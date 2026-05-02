@@ -1,5 +1,6 @@
 import styles from './Footer.module.css';
 import { SOCIAL_LINKS } from '../../lib/contact';
+import SocialLink from '../SocialLink/SocialLink';
 
 export default function Footer() {
   return (
@@ -32,12 +33,12 @@ export default function Footer() {
                 </svg>
                 <span>Instagram</span>
               </a>
-              <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <SocialLink href={SOCIAL_LINKS.tiktok} ariaLabel="TikTok">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="currentColor" d="M14.4 2h2.45a4.52 4.52 0 0 0 3.1 3.13v2.5a7.03 7.03 0 0 1-3.1-.73v7.2A6.1 6.1 0 1 1 10.75 8v2.61a3.5 3.5 0 1 0 3.65 3.49V2z" />
                 </svg>
                 <span>TikTok</span>
-              </a>
+              </SocialLink>
               <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="currentColor" d="M13.2 21v-7.7h2.6l.4-3h-3V8.4c0-.87.25-1.46 1.5-1.46h1.6V4.25c-.28-.04-1.22-.12-2.32-.12-2.3 0-3.88 1.4-3.88 3.98v2.2H7.5v3h2.6V21h3.1z" />

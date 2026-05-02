@@ -4,6 +4,7 @@ export type NavLink = {
 }
 
 export type SectionKey =
+  | 'jaecoo-bandung'
   | 'models'
   | 'specs'
   // | 'finance'
@@ -13,6 +14,7 @@ export type SectionKey =
 
 export const NAV_LINKS: NavLink[] = [
   { label: 'Home', href: '/' },
+  { label: 'Jaecoo Bandung', href: '/jaecoo-bandung' },
   { label: 'Models', href: '/models' },
   // { label: 'Finance', href: '/finance' },
   { label: 'Compare', href: '/compare' },
@@ -24,6 +26,11 @@ export const SECTION_CONTENT: Record<
   SectionKey,
   { title: string; description: string }
 > = {
+  'jaecoo-bandung': {
+    title: 'Jaecoo Bandung',
+    description:
+      'Cari Jaecoo Bandung? Cek harga OTR Bandung, promo, spesifikasi model, dan booking test drive via WhatsApp.',
+  },
   models: {
     title: 'Models',
     description:

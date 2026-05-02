@@ -14,6 +14,7 @@ export default function Footer() {
           <div className={styles.linkColumn}>
             <h5>Explore</h5>
             <a href="/#hero">Home</a>
+            <a href="/jaecoo-bandung">Jaecoo Bandung</a>
             <a href="/#models">Models</a>
             <a href="/compare">Compare</a>
             <a href="/#testimonials">Testimoni</a>

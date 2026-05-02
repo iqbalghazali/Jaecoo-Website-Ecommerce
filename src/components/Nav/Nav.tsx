@@ -12,6 +12,7 @@ type NavLinkItem = {
 
 const fallbackLinks: NavLinkItem[] = [
   { label: 'Home', href: '/' },
+  { label: 'Jaecoo Bandung', href: '/jaecoo-bandung' },
   { label: 'Models', href: '/models' },
   { label: 'Specs', href: '/specs' },
   // { label: 'Finance', href: '/finance' },

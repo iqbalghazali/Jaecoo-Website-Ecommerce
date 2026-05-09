@@ -6,7 +6,7 @@ import BookingSection from '../../components/Booking/BookingSection'
 import Footer from '../../components/Footer/Footer'
 import FloatingWhatsApp from '../../components/FloatingWhatsApp/FloatingWhatsApp'
 
-const siteUrl = 'https://jaecoomurahbdg.com'
+const siteUrl = 'https://www.jaecoomurahbdg.com'
 
 export const metadata: Metadata = {
   title: 'Jaecoo Bandung (Harga, Promo, Test Drive)',

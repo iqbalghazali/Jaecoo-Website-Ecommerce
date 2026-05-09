@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Model JAECOO Bandung',
     description:
       'Bandingkan model JAECOO berdasarkan harga, fitur, dan spesifikasi untuk kebutuhan berkendara di Bandung.',
-    url: 'https://jaecoomurahbdg.com/models',
+    url: 'https://www.jaecoomurahbdg.com/models',
   },
 }
 

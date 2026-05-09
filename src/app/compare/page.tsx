@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Perbandingan Model JAECOO',
     description:
       'Gunakan halaman perbandingan untuk memilih model JAECOO terbaik berdasarkan kebutuhan dan budget.',
-    url: 'https://jaecoomurahbdg.com/compare',
+    url: 'https://www.jaecoomurahbdg.com/compare',
   },
 };
 

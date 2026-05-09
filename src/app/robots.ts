@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/'],
       },
     ],
-    sitemap: 'https://jaecoomurahbdg.com/sitemap.xml',
+    sitemap: 'https://www.jaecoomurahbdg.com/sitemap.xml',
   }
 }

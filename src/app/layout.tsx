@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { SHOWROOM_PHONE_DISPLAY, SOCIAL_LINKS } from '../lib/contact'
 
-const siteUrl = 'https://jaecoomurahbdg.com'
+const siteUrl = 'https://www.jaecoomurahbdg.com'
 const showroomAddress =
   'Jl. Soekarno-Hatta No. 590, Sekejati, Kec. Buah Batu, Kota Bandung, Jawa Barat 40286'
 

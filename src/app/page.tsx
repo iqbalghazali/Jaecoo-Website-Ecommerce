@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Dealer Resmi JAECOO Bandung",
     description:
       "Cek model JAECOO terbaru di Bandung, lihat spesifikasi dan harga OTR, lalu booking test drive langsung via WhatsApp.",
-    url: "https://jaecoomurahbdg.com/",
+    url: "https://www.jaecoomurahbdg.com/",
   },
 };
 
